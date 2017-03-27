@@ -1,4 +1,0 @@
-accessing
-package
-
-	^ 'Kernel-Rules'
