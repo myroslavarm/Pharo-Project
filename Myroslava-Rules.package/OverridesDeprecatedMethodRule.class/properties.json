@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "YuriyTymchuk 5/25/2016 16:39",
+	"super" : "ReAbstractRule",
+	"category" : "Myroslava-Rules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OverridesDeprecatedMethodRule",
+	"type" : "normal"
+}
