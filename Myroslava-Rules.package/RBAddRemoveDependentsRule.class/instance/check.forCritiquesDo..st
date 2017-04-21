@@ -1,5 +1,5 @@
 running
-check: aClass forCritiquesDo: critiquesBlock
+check: aClass forCritiquesDo: aCriticBlock
 	| addSends removeSends |
 	addSends := 0.
 	removeSends := 0.
@@ -14,4 +14,4 @@ check: aClass forCritiquesDo: critiquesBlock
 								ifTrue: [ addSends := addSends + 1 ].
 							each selector = #removeDependent:
 								ifTrue: [ removeSends := removeSends + 1 ] ] ] ].
-	addSends > removeSends ifTrue: [ critiquesBlock cull: (self critiqueFor: aClass) ]
+	addSends > removeSends ifTrue: [ aCriticBlock cull: (self critiqueFor: aClass) ]
