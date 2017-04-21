@@ -1,3 +1,3 @@
 accessing
 oldPackage
-	^ 'Potential Bugs'
+	^ 'Kernel-Rules'
