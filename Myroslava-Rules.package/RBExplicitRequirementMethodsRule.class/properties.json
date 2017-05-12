@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MarcusDenker 12/1/2014 13:35",
+	"super" : "ReAbstractRule",
+	"category" : "Myroslava-Rules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RBExplicitRequirementMethodsRule",
+	"type" : "normal"
+}
