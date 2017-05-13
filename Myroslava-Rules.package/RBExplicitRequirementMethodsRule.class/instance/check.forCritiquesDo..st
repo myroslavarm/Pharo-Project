@@ -2,17 +2,23 @@ running
 check: aClass forCritiquesDo: aCritiqueBlock
 
 	| explicitRequirementMethods |
-	explicitRequirementMethods := Set new.
+	
 	
 	aClass isTrait 
 		ifTrue: [ ^ self ].
 		
-	aClass traitComposition allSelectors do: [ :selector | | method |
-				method := aClass>>selector.
-				 (method isRequired and: [ method isSubclassResponsibility not ]) 
-						ifTrue: [ explicitRequirementMethods add: method ]].
+	explicitRequirementMethods := aClass traitComposition allSelectors
+		collect: [ :selector |
+			aClass>>selector ]
+		thenSelect: [ :method |
+			method isRequired and: [ method isSubclassResponsibility not ] ].
 	
-	(explicitRequirementMethods anySatisfy: [ :method |
-		aClass withAllSuperclasses 
-			noneSatisfy: [ :superclass | superclass canPerform: method selector ] ]) ifTrue: [
-        aCritiqueBlock cull: (self critiqueFor: aClass) ]
+	explicitRequirementMethods
+		select: [ :method |
+      		aClass withAllSuperclasses noneSatisfy: [ :superclass |
+				superclass canPerform: method selector ] ]
+		thenDo: [ :method |
+			aCritiqueBlock cull: (
+				(self critiqueFor: aClass)
+  					tinyHint: method selector;
+  					yourself) ]
