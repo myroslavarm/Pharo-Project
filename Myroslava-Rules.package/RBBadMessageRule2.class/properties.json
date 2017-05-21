@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ReNodeBasedRule",
+	"category" : "Myroslava-Rules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RBBadMessageRule2",
+	"type" : "normal"
+}
