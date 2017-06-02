@@ -1,3 +1,3 @@
-testing
+accessing
 oldPackage
 	^ 'Refactoring-Critics-BlockRules'

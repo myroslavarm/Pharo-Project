@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "",
-	"super" : "ReNodeBasedRule",
+	"commentStamp" : "StephaneDucasse 11/29/2014 20:59",
+	"super" : "ReAbstractRule",
 	"category" : "Myroslava-Rules",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "RBBadMessageRule2",
+	"name" : "RBInstVarInSubclassesRule",
 	"type" : "normal"
 }

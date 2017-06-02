@@ -1,12 +1,5 @@
-running
-check: aMethod forCritiquesDo: aCriticBlock
-	
-	self badSelectors
-		select: [ :each | aMethod sendsSelector: each ]
-		thenDo: [ :each |
-			aCriticBlock cull: (ReTrivialCritique
-					withAnchor: (ReSearchStringSourceAnchor
-						entity: aMethod
-						string: each)
-					by: self
-					hint: each) ]
+enumerating
+check: aNode forCritiquesDo: aCriticBlock
+    (aNode isMessage and: [ 
+    self badSelectors includes: aNode selector ])
+        ifTrue: [ aCriticBlock cull: (self critiqueFor: aNode) ]

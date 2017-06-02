@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "StephaneDucasse 11/29/2014 21:14",
-	"super" : "ReAbstractRule",
+	"commentStamp" : "MyroslavaRomaniuk 6/3/2017 00:47",
+	"super" : "ReNodeBasedRule",
 	"category" : "Myroslava-Rules",
 	"classinstvars" : [ ],
 	"pools" : [ ],
