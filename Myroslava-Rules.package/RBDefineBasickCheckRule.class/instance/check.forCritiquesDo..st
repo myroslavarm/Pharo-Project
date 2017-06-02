@@ -1,6 +1,9 @@
 enumerating
 check: aClass forCritiquesDo: aCritiqueBlock
-	(self basicCheck: aClass)
+	((aClass inheritsFrom: RBLintRule) and: [ 
+		aClass isVisible and: [ 
+	  (aClass lookupSelector: #basicCheck:) isSubclassResponsibility ] ])
+
 		ifTrue: [ aCritiqueBlock cull: (
 			ReMissingMethodCritique
 				for: aClass
