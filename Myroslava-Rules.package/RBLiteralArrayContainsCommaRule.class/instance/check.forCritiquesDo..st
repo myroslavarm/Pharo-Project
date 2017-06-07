@@ -1,4 +1,7 @@
 running
-check: aMethod forCritiquesDo: aCritiqueBlock 
-	(aMethod allLiterals anySatisfy: [ :each | self doesLiteralArrayContainComma: each ])
-	ifTrue: [ aCritiqueBlock cull: (self critiqueFor: aMethod) ]
+check: aNode forCritiquesDo: aCritiqueBlock 
+	aNode isLiteralArray ifFalse: [ ^ self ].
+	(aNode value includes: #,) ifFalse: [ ^ self ].
+
+
+	aCritiqueBlock cull: (self critiqueFor: aNode)
