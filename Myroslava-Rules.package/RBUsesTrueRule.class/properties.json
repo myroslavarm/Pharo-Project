@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "StephaneDucasse 11/29/2014 20:14",
+	"super" : "ReAbstractRule",
+	"category" : "Myroslava-Rules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"trueBinding",
+		"falseBinding"
+	],
+	"name" : "RBUsesTrueRule",
+	"type" : "normal"
+}
