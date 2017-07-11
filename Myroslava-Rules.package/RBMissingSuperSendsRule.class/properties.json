@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "StephaneDucasse 11/29/2014 20:51",
+	"super" : "ReAbstractRule",
+	"category" : "Myroslava-Rules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RBMissingSuperSendsRule",
+	"type" : "normal"
+}
