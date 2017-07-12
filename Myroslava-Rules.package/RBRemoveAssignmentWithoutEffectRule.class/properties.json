@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ReNodeRewriteRule",
+	"category" : "Myroslava-Rules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RBRemoveAssignmentWithoutEffectRule",
+	"type" : "normal"
+}
