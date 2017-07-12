@@ -1,9 +1,9 @@
-as yet unclassified
+enumerating
 check: node forCritiquesDo: aCriticBlock
-	(node isMessage
-		and: [ node receiver isBlock
-				and: [ node parent isCascade not
-						and:
-							[ #(#value #value: #value:value: #value:value:value: #valueWithArguments:)
-								includes: node selector ] ] ])
-		ifTrue: [ aCriticBlock cull: (self critiqueFor: node) ]
+	node isMessage ifFalse: [ ^ self ].
+	node receiver isBlock ifFalse: [ ^ self ].
+	node parent isCascade ifTrue: [ ^ self ].
+	(self blockEvaluatingMessages includes: node selector)
+		ifFalse: [ ^ self ].
+	
+	aCriticBlock cull: (self critiqueFor: node)
