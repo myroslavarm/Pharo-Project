@@ -1,0 +1,4 @@
+accessing
+oldPackage
+
+	^ 'Kernel-Rules'
