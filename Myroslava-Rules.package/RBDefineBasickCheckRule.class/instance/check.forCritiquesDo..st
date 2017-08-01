@@ -1,4 +1,4 @@
-enumerating
+as yet unclassified
 check: aClass forCritiquesDo: aCritiqueBlock
 	((aClass inheritsFrom: RBLintRule) and: [ 
 		aClass isVisible and: [ 

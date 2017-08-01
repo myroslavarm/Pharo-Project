@@ -6,10 +6,12 @@ check: aNode forCritiquesDo: aCriticBlock
 	
 	messageReceiver := aNode receiver.
 	messageReceiver isVariable ifFalse: [ ^ self ].
-	messageReceiver isGlobal ifFalse: [ ^ self ].
 	
 
-	((Smalltalk globals at: messageReceiver name asSymbol)
-		respondsTo: aNode selector) ifTrue: [ ^ self ].
+	((Smalltalk globals
+		at: messageReceiver name asSymbol
+		ifAbsent: [ ^ self ])
+			respondsTo: aNode selector)
+				ifTrue: [ ^ self ].
 		
 	aCriticBlock cull: (self critiqueFor: aNode)
