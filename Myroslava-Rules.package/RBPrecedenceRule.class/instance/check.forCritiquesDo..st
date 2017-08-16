@@ -5,6 +5,7 @@ check: aNode forCritiquesDo: aCriticBlock
 	aNode isMessage ifFalse: [ ^ self ].
 	aNode selector = #* ifFalse: [ ^ self ].
 	leftOperand := aNode receiver.
+	leftOperand isMessage ifFalse: [ ^ self ].
 	leftOperand hasParentheses ifTrue: [ ^ self ].
 	(#(#+ #-) includes: leftOperand selector) ifFalse: [ ^ self ].
 	
