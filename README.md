@@ -1,5 +1,5 @@
 # Pharo-Project
-This is the main repository used while working on my GSoC project - Advancing in Pharo Code Quality support.
+This is the main repository used while working on my **GSoC project - Advancing in Pharo Code Quality Support**.
 This repository contains updated rules. The types of the rules I have been working on converting are RBBlockLintRule, RBParseTreeRule, and RBTransformationRule. During GSoC I converted more than 100 rules. With some rules, I created their node versions from scratch ([example](https://github.com/myroslavarm/Pharo-Project/tree/master/Myroslava-Rules.package/RBBadMessageRule.class)).
 
 Two other repositories I made commits into as part of GSoC are:
